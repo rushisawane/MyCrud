@@ -1,0 +1,12 @@
+{{ employees | json }} 
+<form (submit)="addEmp()">
+<input type="text" ([ngModel])="empNew.eno">
+<input type="text" ([ngModel])="empNew.ename">
+<input type="text" ([ngModel])="empNew.sal">
+<input type="submit">
+</form>
+<div ng-show="showEmp">
+<input type="text" ([ngModel])="empNew.eno">
+<input type="text" ([ngModel])="empNew.ename">
+<input type="text" ([ngModel])="empNew.sal">
+</div>
