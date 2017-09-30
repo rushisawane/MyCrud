@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Employee } from './employee';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  Emp:Array<Employee>=[
+    new Employee(1,'ABC',15000),
+    new Employee(2,'XYZ',10000),
+    new Employee(3,'PQR',17000)
+  ];
+
+  addNewEmp($event)
+  {
+    this.Emp.push($event);
+  }
 }

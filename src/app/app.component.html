@@ -1,1 +1,2 @@
-<app-emp></app-emp>
+{{ Emp | json }}
+<app-emp [getEmp]="Emp" (setEmp)="addNewEmp($event)"></app-emp>
