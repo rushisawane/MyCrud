@@ -8,13 +8,15 @@ import {Employee} from '../employee';
 export class EmpComponent
 {
     //Get Employee object from parent component
-    @Input("getEmp") newEmp;
+    newEmp=new Employee();
+    //@Input("getEmp") newEmp;
     @Output() setEmp=new EventEmitter();
     //newEmp=new Employee();
-    
+
     addDetails()
     {
-        //Set Employee object to the Parent Component
+        console.log(this.newEmp);
         this.setEmp.emit(this.newEmp);
+        this.newEmp=new Employee();
     }
 }

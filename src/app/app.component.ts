@@ -8,13 +8,12 @@ import { Employee } from './employee';
 })
 export class AppComponent {
   Emp:Array<Employee>=[
-    new Employee(1,'ABC',15000),
-    new Employee(2,'XYZ',10000),
-    new Employee(3,'PQR',17000)
+    //new Employee(1,'ABC',15000),
+    //new Employee(2,'XYZ',10000),
+    //new Employee(3,'PQR',17000)
   ];
-
-  addNewEmp($event)
+  addData(event:any)
   {
-    this.Emp.push($event);
+    this.Emp.push(event);
   }
 }
