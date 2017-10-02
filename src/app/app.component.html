@@ -1,3 +1,5 @@
 {{ Emp | json }}
 <app-emp (setEmp)="addData($event)"></app-emp>
-<app-emp-list [getEmp]="Emp"></app-emp-list>
+<br/>
+<app-emp-list [getEmp]="Emp"
+              (deletEmp)="deleteEmp($event)"></app-emp-list>

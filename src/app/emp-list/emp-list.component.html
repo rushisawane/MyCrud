@@ -1,5 +1,4 @@
-<div>
-   <table>
+<table *ngIf="Emp.length>=1">
    <tr>
         <th>ENO</th>
         <th>ENAME</th>
@@ -9,6 +8,7 @@
         <td>{{employee.eno}}</td>
         <td>{{employee.ename}}</td>
         <td>{{employee.esal}}</td>
+        <td><input type="button" value="Edit"></td>
+        <td><input type="button" value="Delete" (click)="deleteEmp(employee)"></td>
     </tr>
-    </table>
-</div>
+</table>

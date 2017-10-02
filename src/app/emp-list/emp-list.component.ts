@@ -1,4 +1,5 @@
 import { Component,Input,Output,EventEmitter } from '@angular/core';
+import { Employee } from '../employee';
 
 @Component({
     selector:'app-emp-list',
@@ -8,7 +9,13 @@ import { Component,Input,Output,EventEmitter } from '@angular/core';
 })
 export class EmpListComponent
 {
+   //get employee list from parent component to display
    @Input("getEmp") Emp;
-  // @Output() setEmp = new EventEmitter();
+   //send employee object to parent for deletion
+   @Output() deletEmp = new EventEmitter();
+  
+  deleteEmp(employee:Employee){
+    this.deletEmp.emit(employee);
+  }
 
 }
