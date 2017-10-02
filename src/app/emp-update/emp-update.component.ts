@@ -1,3 +1,4 @@
+import { Component,Input } from '@angular/core';
 
 @Component({
     selector:'app-emp-update',
@@ -5,5 +6,5 @@
 })
 export class EmpUpdateComponent
 {
-
+    @Input("updateEmp") updateEmp;
 }

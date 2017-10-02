@@ -19,6 +19,6 @@ export class AppComponent {
   deleteEmp(employee:Employee){
     //IndexOf method not supported on IE7 and IE8
     var i=this.Emp.indexOf(employee);
-    this.Emp.splice(i);
+    this.Emp.splice(i,1);
   }
 }
