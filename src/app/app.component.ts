@@ -21,4 +21,8 @@ export class AppComponent {
     var i=this.Emp.indexOf(employee);
     this.Emp.splice(i,1);
   }
+  editeEmp(employee:any){
+      var i=this.Emp.indexOf(employee.original);
+      this.Emp[i]=employee.edited;
+  }
 }

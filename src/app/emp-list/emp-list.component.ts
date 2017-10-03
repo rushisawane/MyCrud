@@ -9,19 +9,20 @@ import { Employee } from '../employee';
 })
 export class EmpListComponent
 {
-   editeEmp=new Employee();
-   updateBtnClicked:boolean=false;
+   //editeEmp=new Employee();
    //get employee list from parent component to display 
    @Input("getEmp") Emp;
    //send employee object to parent for deletion
    @Output() deletEmp = new EventEmitter();
+   @Output() editeEmp = new EventEmitter();
   
   deleteEmp(employee:Employee){
     this.deletEmp.emit(employee);
   }
-  editEmp(editEmp:Employee){
-    this.updateBtnClicked=true;
-    this.editeEmp=editEmp;
+  updateEmp(editEmp:Employee){
+    this.editeEmp.emit(editEmp);
+
+    
   }
 
 }

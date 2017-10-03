@@ -1,4 +1,4 @@
 export class Employee
 {
-    constructor(eno:number=Math.random(),ename:string='',esal:number=Math.random()){}
+    constructor(eno:number=Math.random(),ename:string='',esal:number=Math.random(),public editable:boolean=false){}
 }

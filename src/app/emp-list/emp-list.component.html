@@ -8,12 +8,11 @@
         <td>{{employee.eno}}</td>
         <td>{{employee.ename}}</td>
         <td>{{employee.esal}}</td>
-        <td><input type="button" value="Edit" (click)="editEmp(employee)"></td>
+        <td><input type="button" value="Edit" (click)="employee.editable=!employee.editable"></td>
         <td><input type="button" value="Delete" (click)="deleteEmp(employee)"></td>
-        
+        <br/>
+        <td><app-emp-update [updateEmp]="employee" (setUpdatedEmp)="updateEmp($event)" *ngIf="employee.editable"></app-emp-update></td>
     </tr>
     
 </table>
-<br/>
-<app-emp-update [updateEmp]="editeEmp" *ngIf="updateBtnClicked"></app-emp-update>
 

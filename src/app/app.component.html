@@ -2,4 +2,5 @@
 <app-emp (setEmp)="addData($event)"></app-emp>
 <br/>
 <app-emp-list [getEmp]="Emp"
-              (deletEmp)="deleteEmp($event)"></app-emp-list>
+              (deletEmp)="deleteEmp($event)"
+              (editeEmp)="editeEmp($event)"></app-emp-list>
