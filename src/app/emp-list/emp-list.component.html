@@ -3,6 +3,7 @@
         <th>ENO</th>
         <th>ENAME</th>
         <th>SALARY</th>
+        <th colspan="3">Action</th>
     </tr>
     <tr *ngFor="let employee of Emp">
         <td>{{employee.eno}}</td>
@@ -10,9 +11,7 @@
         <td>{{employee.esal}}</td>
         <td><input type="button" value="Edit" (click)="employee.editable=!employee.editable"></td>
         <td><input type="button" value="Delete" (click)="deleteEmp(employee)"></td>
-        <br/>
-        <td><app-emp-update [updateEmp]="employee" (setUpdatedEmp)="updateEmp($event)" *ngIf="employee.editable"></app-emp-update></td>
-    </tr>
-    
+        <td *ngIf="employee.editable"><app-emp-update [updateEmp]="employee" (setUpdatedEmp)="updateEmp($event)"></app-emp-update></td>
+    </tr>    
 </table>
 
